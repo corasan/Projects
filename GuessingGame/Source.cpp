@@ -8,13 +8,13 @@ int main() {
 	// woop!
 	int guess; 
 	srand(time(0));
-	int random = rand() % 20;
+	int random = rand() % 20+1;
 	int tries = 0;
 
 	cout << "Guess a number between 1-20, you have 3 tries: ";
 	cin >> guess;
 	
-	while (guess != random && tries < 3) {
+	while (guess != random && tries < 2) {
 		if (guess < random) {
 			cout << "Number is higher. Guess again: ";
 			cin >> guess;
@@ -30,7 +30,7 @@ int main() {
 		cout << "Correct! " << endl;
 	}
 	else {
-		cout << "The number was " << random << endl;
+		cout << "You  lost. The number was " << random << endl;
 		cin >> guess;
 	}
 	//system("PAUSE") is not good practice to use or have!
