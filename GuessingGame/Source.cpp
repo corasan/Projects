@@ -27,7 +27,7 @@ int main() {
 	}
 
 	if (guess == random){
-		cout << "Correct! " << endl;
+		cout << "You win! Te ganate un quipe sin carne woop!" << endl;
 	}
 	else {
 		cout << "You  lost. The number was " << random << endl;
