@@ -19,7 +19,7 @@ int main() {
 			cout << "Number is higher. Guess again: ";
 			cin >> guess;
 		}
-		if (guess > random) {
+		else if (guess > random) {
 			cout << "Number is lower. Guess again: ";
 			cin >> guess;
 		}
