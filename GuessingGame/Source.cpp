@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-
+	// woop!
 	int guess; 
 	srand(time(0));
 	int random = rand() % 20;
