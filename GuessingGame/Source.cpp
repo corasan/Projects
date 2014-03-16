@@ -6,15 +6,16 @@ using namespace std;
 
 int main() {
 	// woop!
+	const int max_attempts = 3;//make it constant, since its value wont change
 	int guess; 
 	srand(time(0));
 	int random = rand() % 20+1;
 	int tries = 0;
 
-	cout << "Guess a number between 1-20, you have 3 tries: ";
+	cout << "Guess a number between 1-20, you have " << max_attempts << " tries: ";
 	cin >> guess;
 	
-	while (guess != random && tries < 2) {
+	while (guess != random && tries < max_attempts) {
 		if (guess < random) {
 			cout << "Number is higher. Guess again: ";
 			cin >> guess;
@@ -27,11 +28,11 @@ int main() {
 	}
 
 	if (guess == random){
-		cout << "You win! Te ganate un quipe sin carne woop!" << endl;
+		cout << "Correct! " << endl;
 	}
 	else {
 		cout << "You  lost. The number was " << random << endl;
-		cin >> guess;
+		cin >> guess;//why is there a cin>>guess here?
 	}
 	//system("PAUSE") is not good practice to use or have!
 	cin.sync();
