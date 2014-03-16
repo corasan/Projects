@@ -33,6 +33,8 @@ int main() {
 		cout << "The number was " << random << endl;
 		cin >> guess;
 	}
-	system("pause");
+	//system("PAUSE") is not good practice to use or have!
+	cin.sync();
+	cin.get();
 	return 0;
 }
